@@ -29,9 +29,9 @@ public class resetPanel extends JPanel implements ActionListener{
 				btnPanel.successCount[i] = 0;
 			}
 			btnPanel.successPercent = 75.0;
-			gui.engraveLevel1.setText("");
-			gui.engraveLevel2.setText("");
-			gui.engraveLevel3.setText("");
+			gui.engraveLevel1.setText(gui.currentLV[0]);
+			gui.engraveLevel2.setText(gui.currentLV[1]);
+			gui.engraveLevel3.setText(gui.currentLV[2]);
 			String perText = "È®·ü : 75.0%";
 			introPanel.percentageLabel.setText(perText);
 			gui.currentLv1.setText("+0");

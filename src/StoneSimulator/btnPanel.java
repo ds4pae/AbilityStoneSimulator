@@ -57,7 +57,11 @@ public class btnPanel extends JPanel implements ActionListener{
 	                    successPercent += 10.0;
 	                }
 	            }
-	           gui.engraveLevel1.setText(engraveLevelString[0]);
+	            String returnString1 = engraveLevelString[0];
+	            while(returnString1.length() != 10) {
+	            	returnString1 = returnString1 + "□";		//마름모 수정 필요 (오류 발생)
+	            }
+	            gui.engraveLevel1.setText(returnString1);
 	           btnCount[0]++;
 	    	}
 	    	else {
@@ -82,7 +86,11 @@ public class btnPanel extends JPanel implements ActionListener{
 	                    successPercent += 10.0;
 	                }
 	            }
-	           gui.engraveLevel2.setText(engraveLevelString[1]);
+	            String returnString2 = engraveLevelString[1];
+	            while(returnString2.length() != 10) {
+	            	returnString2 = returnString2 + "□";		//마름모 수정 필요 (오류 발생)
+	            }
+	            gui.engraveLevel2.setText(returnString2);
 	           btnCount[1]++;
 	    	}
 	    	else {
@@ -92,12 +100,12 @@ public class btnPanel extends JPanel implements ActionListener{
 	    
 	    if (e.getSource() == button3) {
 	    	if(btnCount[2] != 10) {
+	    		
 	    		// 75% 확률로 성공
 	            double percent = new Random().nextDouble(100); 
 	            if (percent < successPercent) {
 	                engraveLevelString[2] += "◆";
 	                successCount[2]++;
-	                gui.engraveLevel3.setText(engraveLevelString[2]);
 	                if(successPercent > 25.0) {
 	                    successPercent -= 10.0;
 	                }
@@ -107,7 +115,11 @@ public class btnPanel extends JPanel implements ActionListener{
 	                    successPercent += 10.0;
 	                }
 	            }
-	            gui.engraveLevel3.setText(engraveLevelString[2]);
+	            String returnString3 = engraveLevelString[2];
+	            while(returnString3.length() != 10) {
+	            	returnString3 = returnString3 + "□";		//마름모 수정 필요 (오류 발생)
+	            }
+	            gui.engraveLevel3.setText(returnString3);
 	           btnCount[2]++;
 	    	}
 	    	else {

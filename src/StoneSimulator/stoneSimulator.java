@@ -17,18 +17,19 @@ public class stoneSimulator extends JFrame{
 	 public btnPanel btnPanel = new btnPanel(this);
 	 public resetPanel resetPanel = new resetPanel(this);
 	 
-	    String[] engraveName = {"기습의 대가", "아드레날린", "공격력 감소"};
-	    String[] engraveLevel = {"", "", ""};
+	   String[] engraveName = {"기습의 대가", "아드레날린", "공격력 감소"};
+	   String[] engraveLevel = {"", "", ""};
+	   public String[] currentLV = {"□□□□□□□□□□", "□□□□□□□□□□", "□□□□□□□□□□"};
 	   JLabel engraveName1 = new JLabel(engraveName[0]);
 	   JLabel engraveName2 = new JLabel(engraveName[1]);
 	   JLabel engraveName3 = new JLabel(engraveName[2]);
-	   JLabel engraveLevel1 = new JLabel();
-	   JLabel engraveLevel2 = new JLabel();
-	   JLabel engraveLevel3 = new JLabel();
+	   JLabel engraveLevel1 = new JLabel(currentLV[0]);
+	   JLabel engraveLevel2 = new JLabel(currentLV[1]);
+	   JLabel engraveLevel3 = new JLabel(currentLV[2]);
 	   JLabel currentLv1 = new JLabel("+0");
 	   JLabel currentLv2 = new JLabel("+0");
 	   JLabel currentLv3 = new JLabel("+0");
-	   public String[] currentLV = {"🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷", "🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷", "🔷🔷🔷🔷🔷🔷🔷🔷🔷🔷"};
+	   
 	   
 	   
 	   
