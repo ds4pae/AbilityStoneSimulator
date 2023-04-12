@@ -17,10 +17,10 @@ public class btnPanel extends JPanel implements ActionListener{
 	private JButton button2 = new JButton("아드");
     private JButton button3 = new JButton("감소");
     static int btnCount[] = {0,0,0};
-    static double successPercent = 75.0;
+    static int successPercent = 75;
     static String engraveLevelString[] = {"","",""};
     static int successCount[] = {0,0,0};
-    public static String successString = Double.toString(successPercent);
+    public static String successString = Integer.toString(successPercent);
 	public btnPanel(stoneSimulator gui) {
 		this.gui = gui;
 		setLayout(new GridLayout(3,1));
@@ -43,23 +43,23 @@ public class btnPanel extends JPanel implements ActionListener{
 	    if (e.getSource() == button1) {
 	    	if(btnCount[0] != 10) {
 	    		// 75% 확률로 성공
-	            double percent = new Random().nextDouble(100); 
+	            int percent = new Random().nextInt(100); 
 	            if ( percent < successPercent) {
 	                engraveLevelString[0] += "◆";
 	                successCount[0]++;
 	                gui.currentLv1.setText("+" + successCount[0]);	                
-	                if(successPercent > 25.0) {
-	                    successPercent -= 10.0;
+	                if(successPercent > 25) {
+	                    successPercent -= 10;
 	                }
 	            } else {
 	                engraveLevelString[0] += "◇";
-	                if(successPercent < 75.0) {
-	                    successPercent += 10.0;
+	                if(successPercent < 75) {
+	                    successPercent += 10;
 	                }
 	            }
 	            String returnString1 = engraveLevelString[0];
 	            while(returnString1.length() != 10) {
-	            	returnString1 = returnString1 + "□";		//마름모 수정 필요 (오류 발생)
+	            	returnString1 = returnString1 + "□";		
 	            }
 	            gui.engraveLevel1.setText(returnString1);
 	           btnCount[0]++;
@@ -72,23 +72,23 @@ public class btnPanel extends JPanel implements ActionListener{
 	    if (e.getSource() == button2) {
 	    	if(btnCount[1] != 10) {
 	    		// 75% 확률로 성공
-	            double percent = new Random().nextDouble(100);
+	    		int percent = new Random().nextInt(100);
 	            if ( percent < successPercent) {
 	                engraveLevelString[1] += "◆";
 	                successCount[1]++;
 	                gui.currentLv2.setText("+" + successCount[1]);
-	                if(successPercent > 25.0) {
-	                    successPercent -= 10.0;
+	                if(successPercent > 25) {
+	                    successPercent -= 10;
 	                }
 	            } else {
 	                engraveLevelString[1] += "◇";
-	                if(successPercent < 75.0) {
-	                    successPercent += 10.0;
+	                if(successPercent < 75) {
+	                    successPercent += 10;
 	                }
 	            }
 	            String returnString2 = engraveLevelString[1];
 	            while(returnString2.length() != 10) {
-	            	returnString2 = returnString2 + "□";		//마름모 수정 필요 (오류 발생)
+	            	returnString2 = returnString2 + "□";		
 	            }
 	            gui.engraveLevel2.setText(returnString2);
 	           btnCount[1]++;
@@ -100,24 +100,23 @@ public class btnPanel extends JPanel implements ActionListener{
 	    
 	    if (e.getSource() == button3) {
 	    	if(btnCount[2] != 10) {
-	    		
 	    		// 75% 확률로 성공
-	            double percent = new Random().nextDouble(100); 
+	    		int percent = new Random().nextInt(100); 
 	            if (percent < successPercent) {
 	                engraveLevelString[2] += "◆";
 	                successCount[2]++;
-	                if(successPercent > 25.0) {
-	                    successPercent -= 10.0;
+	                if(successPercent > 25) {
+	                    successPercent -= 10;
 	                }
 	            } else {
 	                engraveLevelString[2] += "◇";
-	                if(successPercent < 75.0) {
-	                    successPercent += 10.0;
+	                if(successPercent < 75) {
+	                    successPercent += 10;
 	                }
 	            }
 	            String returnString3 = engraveLevelString[2];
 	            while(returnString3.length() != 10) {
-	            	returnString3 = returnString3 + "□";		//마름모 수정 필요 (오류 발생)
+	            	returnString3 = returnString3 + "□";		
 	            }
 	            gui.engraveLevel3.setText(returnString3);
 	           btnCount[2]++;
@@ -129,7 +128,7 @@ public class btnPanel extends JPanel implements ActionListener{
 	
 	    
 	    gui.currentLv3.setText("+" + successCount[2]);
-	    String successString = Double.toString(successPercent);
+	    String successString = Integer.toString(successPercent);
 	    introPanel.percentageLabel.setText("확률 : " + successString + "%");
 	    }
 	}

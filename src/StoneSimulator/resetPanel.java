@@ -28,11 +28,11 @@ public class resetPanel extends JPanel implements ActionListener{
 				btnPanel.engraveLevelString[i] = "";
 				btnPanel.successCount[i] = 0;
 			}
-			btnPanel.successPercent = 75.0;
+			btnPanel.successPercent = 75;
 			gui.engraveLevel1.setText(gui.currentLV[0]);
 			gui.engraveLevel2.setText(gui.currentLV[1]);
 			gui.engraveLevel3.setText(gui.currentLV[2]);
-			String perText = "È®·ü : 75.0%";
+			String perText = "È®·ü : 75%";
 			introPanel.percentageLabel.setText(perText);
 			gui.currentLv1.setText("+0");
 			gui.currentLv2.setText("+0");
